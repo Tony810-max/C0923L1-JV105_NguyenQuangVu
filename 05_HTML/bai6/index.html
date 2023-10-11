@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 6</title>
+</head>
+<body>
+    <style>
+        
+        td{
+            text-align: left;
+        }
+        h1{
+            width: 50%;
+            text-align: center;
+        }
+        .part1{
+            width: 50%;
+            background-color: aqua;
+        }
+
+        .content{
+            display: block;
+            width: 100%;
+        }
+        .part2{
+            background-color: bisque;
+            width: 50%;
+        }
+        .content2{
+            background-color:aquamarine ;
+        }
+    </style>
+    <div class="part1">
+
+        <table>
+            <h1 style="background-color: tomato; color: #fff;" class="content">Sở thích của bạn</h1>
+            <tr>
+                <td>Họ và tên: </td>
+                <td><input type="text" size="30"></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <table>
+                    <tr>
+                        <td>Sở thích: </td>
+                        <td><input type="checkbox" > Thể thao</td>
+                        <td><input type="checkbox" > Âm nhạc</td>
+                        <td><input type="checkbox" > Đọc sách</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="checkbox" > Lướt web</td>
+                        <td><input type="checkbox" > Chơi game</td>
+                        <td><input type="checkbox" >Điện ảnh</td>
+                    </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox">Du lịch</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Gửi thông tin"></td>
+                    <td><input type="reset" value="Nhập lại"></td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+</div>
+    <div class="part2">
+        <h1 class="content content2">Đăng ký học viên</h1>
+        <table>
+            <tr>
+                <td>Họ và tên: </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh: </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Giới tính: </td>
+                <td><input type="radio" name="gender">Nam <input type="radio" name="gender">Nữ</td>
+            </tr>
+            <tr>
+                <td>Địa chỉ: </td>
+                <td><input type="textarea" size="30px"></td>
+            </tr>
+            <tr>
+                <td>Lớp</td>
+                <td><select name="" id="" >
+                    <option value="--Chọn lớp --">--Chọn lớp --</option>
+                    <option value="--Chọn lớp --">1 </option>
+                    <option value="--Chọn lớp --">2</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Đăng ký"> <input type="reset" value="Nhập lại"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

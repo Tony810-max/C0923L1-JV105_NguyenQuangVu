@@ -1,11 +1,12 @@
-var x  
-
-// Kiểm tra lại khai báo
-function inputName(){
-   
-    x = prompt(" Nhập tên của bạn ở đây")
+function showMessage(){
+    alert('Xin chào!');
 }
-function insertContent(){
-
-    document.getElementById("content").innerHTML=  "ten của bạn là: " + "<b>" + x + "</b>" 
+function showMessage1(){
+    document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+}
+function showMessage2(){
+    document.write('Xin chào!');
+}
+function showMessage3(){
+    console.log('Xin chào!');
 }

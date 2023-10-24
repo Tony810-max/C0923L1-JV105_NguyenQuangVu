@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+    <style>
+        form{
+            background-color: #000;
+            color: #fff;
+            width: 35%;
+            gap: 5px;
+            display: flex;
+            flex-direction: column;
+        } 
+        .box{
+            display: flex;
+        }  
+        h1{
+            text-align: center;
+        }
+        label{
+            flex:1;
+        }
+        input{
+            flex: 1;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #btnCong{
+            flex:1
+        }
+        #btntru{
+            flex:1
+        }
+        #btnnhan{
+            flex:1
+        }
+        #btnchia{
+            flex:1
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Thực hiện phép tính hai chữ số</h1>
+        <div class="box">
+            <label for="first">Nhập số thứ nhất:</label>
+            <input type="number" id="first">
+        </div>
+        <div class="box">
+            <label for="second">Nhập số thứ hai: </label>
+            <input type="number" id="second">
+        </div>
+        <div class="box">
+            <label for="result">Kết quả: </label>
+            <input type="number" id="result" disabled>
+        </div>
+        <div class="btn">
+            <button type="button" id="btnCong">+</button>
+            <button type="button" id="btntru">-</button>
+            <button type="button" id="btnnhan">*</button>
+            <button type="button" id="btnchia">/</button>
+        </div>
+     
+    </form>
+</body>
+<script src="./index.js"></script>
+</html>

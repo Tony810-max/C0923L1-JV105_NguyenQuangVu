@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 3</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        form {
+            padding: 10px;
+            background: #000;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+
+        label {
+            color: #fff;
+            flex: 1;
+        }
+
+        input {
+            margin-top: 10px;
+            flex: 1;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+        }
+        button{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    <!-- Tinh diem trung binh -->
+    <form action="">
+        <h1>
+
+            Tính điểm trung bình của học sinh
+        </h1>
+        <div class="wrapper">
+            <label for=""> Nhập điểm vật lý:</label>
+            <input type="number" id="vatLy" value="1" max="10" min="0">
+        </div>
+        <div class="wrapper">
+            <label for=""> Nhập điểm hóa học:</label>
+            <input type="number" id="hoahoc" value="1" max="10" min="0">
+        </div>
+        <div class="wrapper">
+            <label> Nhập điểm sinh học:</label>
+            <input type="number" id="sinhhoc" value="1" max="10" min="0">
+        </div>
+        <button type="button" id="average">
+            Tính điểm trung bình
+        </button>
+        <button type="button" id="sum">
+            Tính điểm tổng
+        </button>
+    </form>
+
+    <form action="">
+        <h1> Nhập độ C</h1>
+        <div class="wrapper">
+            <label for="celsius">Vui lòng nhập độ C: </label>
+            <input type="number" id="celsius" value="1">
+        </div>
+        <div class="wrapper">
+            <label for="fahrenheit"> Giá trị độ F sau khi chuyển: </label>
+            <input type="number" id="fahrenheit" disabled>
+        </div>
+        <button type="button" id="changeBtn">
+            Chuyển
+        </button> 
+    </form>
+    <form action="">
+        <h1>Diện tích hình tròn</h1>
+        <div class="wrapper">
+            <label for="bankinh" >Nhập bán kính R: </label>
+            <input type="number" min="0" value="0" id="bankinh">
+        </div>
+        <div class="wrapper">
+            <label for="area"  >Diện tích hình tròn là: </label>
+            <input type="number"  id="area" disabled>
+        </div>
+        <div class="wrapper">
+            <label for="chuvi"  >Chu vi hình tròn là: </label>
+            <input type="number"  id="chuvi" disabled>
+        </div>
+        <button type="button" id="btnArea">Tính diện tích</button>
+        <button type="button" id="btnChuvi">Tính chu vi</button>
+
+    </form>
+
+   
+</div>
+</body>
+<script src="./sum_avarage.js"></script>
+<script src="./chuyennhietdo.js"></script>
+<script src="./dientich_chuvihinhtron.js"></script>
+</html>

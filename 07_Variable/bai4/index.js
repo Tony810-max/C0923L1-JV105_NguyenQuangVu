@@ -7,29 +7,31 @@ const btnChange = document.getElementById('btnChange')
 
 
 
-const doiTienViet = () => {
+const doiTienDola = () => {
     let moneyValue = parseInt(moneyInput.value)
 
     let result = moneyValue / 23000
     return result
 }
-const doiTienDola = () => {
+const doiTienViet = () => {
     let moneyValue = parseInt(moneyInput.value)
     let result = moneyValue * 23000
     return result
 }
 
 const chuyendoi = () => {
-    if (select1Input.options[0].text == 'Việt Nam' && select2Input.options[1].text == "USD") {
-        
+    if (select1Input.value == 'VND' && select2Input.value == "USD") {
+
         let result = doiTienDola()
-        moneyChanged.value = result 
+        moneyChanged.value = result
     }
-    else if (select1Input.options[1].text =="Mỹ" && select2Input.options[0].text == "VND") {
+    else if (select1Input.value == 'USD' && select2Input.value == "VND") {
         let result = doiTienViet()
         moneyChanged.value = result
-    } else if (select1Input.options[0].text == "Việt Nam" || select1Input.options[1].text == "Mỹ"){
-        moneyChanged.value = moneyInput.value
+    }
+    else if (select1Input.value == 'VND' || select1Input.value == 'USD') {
+        let moneyValue = parseInt(moneyInput.value)
+        moneyChanged.value = moneyValue
     }
 }
 

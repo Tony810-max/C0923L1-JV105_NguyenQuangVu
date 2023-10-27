@@ -3,6 +3,7 @@ const result = document.getElementById('result')
 
 const btnCheck = document.getElementById('btnCheck')
 
+
 const yearCheck = () => {
     let yearValue = parseInt(yearInput.value)
     if ( yearValue % 4 == 0 && yearValue % 100 != 0 || yearValue % 400 == 0) {

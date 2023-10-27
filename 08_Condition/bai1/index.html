@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 1</title>
     <style>
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
         form{
             display: flex;
             flex-direction: column;
@@ -12,13 +18,15 @@
             width: 50%;
             color: #fff;
             /* text-align: center; */
-            gap: 6px;
+            gap: 10px;
             padding: 5px;
         }
         h1{
             text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
         }
-        box {
+        .box {
             display: flex;
         }
         label{
@@ -35,18 +43,21 @@
     </style>
 </head>
 <body>
-    <form action="">
-        <h1>Kiểm tra năm nhuận</h1>
-        <div class="box">
-            <label for="year">Vui lòng nhập năm vào kiểm tra: </label>
-            <input type="number" value="0" id="year">
-        </div>
-        <div>
-            <label for="">Kết quả kiểm tra: </label>
-            <input type="text" id="result" disabled>
-        </div>
-        <button type="button" id="btnCheck">Kiểm tra</button>
-    </form>
+    <div class="main">
+
+        <form action="">
+            <h1>Kiểm tra năm nhuận</h1>
+            <div class="box">
+                <label for="year">Vui lòng nhập năm vào kiểm tra: </label>
+                <input type="number" value="0" id="year">
+            </div>
+            <div class="box">
+                <label for="">Kết quả kiểm tra: </label>
+                <input type="text" id="result" disabled>
+            </div>
+            <button type="button" id="btnCheck">Kiểm tra</button>
+        </form>
+    </div>
 </body>
 <script src="./index.js"></script>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 4</title>
+    <style>
+        form{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        select{
+            text-align: center;
+        }
+        .box{
+            display: flex;
+          
+        }
+        input{
+            flex: 1;
+        }
+        #result{
+            color: #e92e2e;
+            font-weight: 700;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Tính số ngày trong tháng</h1>
+        <select name="" id="selectMonth">
+            <option value="1">Tháng 1</option>
+            <option value="2">Tháng 2</option>
+            <option value="3">Tháng 3</option>
+            <option value="4">Tháng 4</option>
+            <option value="5">Tháng 5</option>
+            <option value="6">Tháng 6</option>
+            <option value="7">Tháng 7</option>
+            <option value="8">Tháng 8</option>
+            <option value="9">Tháng 9</option>
+            <option value="10">Tháng 10</option>
+            <option value="11">Tháng 11</option>
+            <option value="12">Tháng 12</option>
+        </select>
+        <button type="button" id="btnCalc">Tính số ngày</button>
+        <div class="box">
+            <!-- <label for="">Kết quả</label> -->
+            <input type="text" id="result" disabled>
+        </div>
+    </form>
+</body>
+<script src="./index.js"></script>
+</html>

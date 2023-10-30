@@ -117,3 +117,28 @@ const tinhtoan = () => {
 }
 
 btnMoney.addEventListener('click',tinhtoan)
+
+//bai 7
+const minuteInput = document.getElementById('minute')
+const postageInput = document.getElementById('postageResult')
+const feeDefault = 25000
+const btnPostage = document.getElementById('btnPostage')
+
+const checkPostage = () => {
+    let minuteValue = parseInt(minuteInput.value)
+   
+    if(minuteValue < 50 ){
+        let fee = 600
+        resultPostage = fee + feeDefault
+    }
+     else if(50 < minuteValue < 200){
+        let fee = 400 
+        resultPostage = fee + feeDefault
+    } else if (minuteValue >200 )
+    {
+        let fee = 200 
+        resultPostage = fee + feeDefault
+    }
+    postageInput.value = resultPostage
+}
+btnPostage.addEventListener('click',checkPostage)

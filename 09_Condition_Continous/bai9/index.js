@@ -28,9 +28,92 @@ const kiemtratuoi = () => {
     const ageValue = parseInt(ageInput.value)
     switch (ageValue) {
         case 15:
-            ageResult.value = "Được phép nhập học vào lớp 10"
+            ageResult.value = 'Được phép nhập học vào lớp 10'
+            break
         default:
-            ageResult.value = " Không đủ điều kiện vào lớp 10"
+            ageResult.value = 'Quá tuổi nhập học vào lớp 10'
+
     }
+    
 }
 btnAge.addEventListener('click', kiemtratuoi)
+
+
+//bai 3
+const NumberInput = document.getElementById('NumberFloat')
+const numberResult = document.getElementById('numberResult')
+
+const btnFloat =document.getElementById('btnFloat')
+
+const kiemtraso = () => {
+    const NumberValue = parseFloat(NumberInput.value)
+    if (NumberValue >= 0 ){
+        numberResult.value = "Số này là số dương"
+    }else{
+        numberResult.value = "Số này là số âm"
+    }
+}
+btnFloat.addEventListener('click', kiemtraso)
+
+//bai4
+const firstInput = document.getElementById('numberFirst')
+const secondInput = document.getElementById('numberSecond')
+const thirdInput = document.getElementById('numberthird')
+const resultMax = document.getElementById('resultMax')
+
+const btnMax = document.getElementById('btnMax')
+
+const solonnhat = () => {
+    const firstValue = parseFloat(firstInput.value)
+    const secondValue = parseFloat(secondInput.value)
+    const thirdValue = parseFloat(thirdInput.value)
+
+    if (firstValue >secondValue && firstValue >thirdValue) {
+        resultMax.value = firstValue
+    } else if (secondValue > thirdValue){
+        resultMax.value = secondValue
+    } else {
+        resultMax.value = thirdValue
+    }
+}
+
+btnMax.addEventListener('click', solonnhat)
+
+//bai 5
+
+const middleInput = document.getElementById('middleTest')
+const endInput = document.getElementById('endTest')
+const testResult = document.getElementById('testResult')
+
+const btnTest = document.getElementById('btnTest')
+
+const kiemtrahocluc = ()=> {
+    const middleValue = parseFloat(middleInput.value)
+    const endValue = parseFloat(endInput.value)
+   const  result = (middleValue + endValue)/2
+    if (result > 5){
+        testResult.value = "Chúc mừng bạn đã qua kì thi"
+        
+    } else {
+        testResult.value = "Xin chia buồn bạn"
+    }
+}
+btnTest.addEventListener('click', kiemtrahocluc)
+
+//bai 6
+const priceInput = document.getElementById('price')
+const percentInput = document.getElementById('percent')
+const moneyResult = document.getElementById('moneyResult')
+
+const btnMoney = document.getElementById('btnMoney')
+
+const tinhtoan = () => {
+    let priceValue = parseInt(priceInput.value)
+    let percentValue = parseFloat(percentInput.value)
+
+    let result = priceValue * (percentValue/100)
+
+    moneyResult.value = result
+}
+
+btnMoney.addEventListener('click',tinhtoan)

@@ -6,16 +6,21 @@
     <title>Revision </title>
     <style>
         .main{
+            margin-top: 25px;
             display: flex;
-            gap: 5px
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px
+
         }
         form {
-            width: 30%;
+            width: 40%;
             display: flex;
             flex-direction: column;
             gap: 6px;
             color: #fff;
             background-color: #000;
+           
         }
         h3{
             text-align: center;
@@ -29,7 +34,7 @@
         input{
             flex:1;
         }
-        #result{
+        #result,#resultMax,#ageResult,#numberResult,#testResult,#moneyResult{
             color: #e74040;
             font-weight: 700;
         }
@@ -41,15 +46,15 @@
 </head>
 <body>
     <div class="main">
-        <form action="">
+        <form >
             <h3> Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</h3>
             <div class="box">
                 <label for="firstNumber">Nhập số a:</label>
-                <input type="number" id="firstNumber">
+                <input type="number" value="1" id="firstNumber">
             </div>
             <div class="box">
                 <label for="secondNumber">Nhập số b:</label>
-                <input type="number" id="secondNumber">
+                <input type="number" value="1" id="secondNumber">
             </div>
             <div class="box">
                 <label for="result">result</label>
@@ -57,35 +62,100 @@
             </div>
             <button type="button" id="btnCheck">Kiểm tra</button>
         </form>
-        <form action="">
-            <h3>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10. </h3>
+        <form >
+            <h3> Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</h3>
             <div class="box">
                 <label for="age">Nhập tuổi cần kiểm tra: </label>
-                <input type="number" min="1" max="100" id="age">
-            </div>
-            <div class="box">
-                <label for="result">Kết quả kiểm tra: </label>
-                <input type="number" id="result" disabled>
-            </div>
-            <button type="button"> Kiểm tra</button>
-        </form>
-        <form action="">
-            <h3> Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</h3>
-            <div class="box">
-                <label for="age">Nhập tuổi cần kiểm tra: </label>
-                <input type="number" min="1" max="100" id="age">
+                <input type="number" value="1" min="1" max="100" id="age">
             </div>
             <div class="box">
                 <label for="ageResult">Kết quả kiểm tra: </label>
-                <input type="number"  id="ageResult" disabled>
+                <input type="text"  id="ageResult" disabled />
             </div>
-            <button type="button" id="btnAge">  Kiểm tra</button>
+            <button type="button" id="btnAge">Kiểm tra</button>
+        </form>
+        <form >
+            <h3> Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</h3>
+            <div class="box">
+                <label for="NumberFloat">Nhập số bất kỳ: </label>
+                <input type="number" value="1" min="1" max="100" id="NumberFloat">
+            </div>
+            <div class="box">
+                <label for="numberResult">Kết quả kiểm tra: </label>
+                <input type="text"  id="numberResult" disabled>
+            </div>
+            <button type="button" id="btnFloat">Kiểm tra</button>
+        </form>
+        <form >
+            <h3>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó </h3>
+            <div class="box">
+                <label for="numberFirst">Nhập số thứ nhất: </label>
+                <input type="number" value="1" min="1" max="100" id="numberFirst">
+            </div>
+            <div class="box">
+                <label for="numberSecond">Nhập số thứ hai: </label>
+                <input type="number" value="1" min="1" max="100" id="numberSecond">
+            </div>
+            <div class="box">
+                <label for="numberthird">Nhập số thứ ba: </label>
+                <input type="number" value="1" min="1" max="100" id="numberthird">
+            </div>
+            <div class="box">
+                <label for="resultMax">Kết quả kiểm tra: </label>
+                <input type="text"   id="resultMax" disabled>
+            </div>
+            <button type="button" id="btnMax">Kiểm tra</button>
+        </form>
+        <form >
+            <h3>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</h3>
+            <div class="box">
+                <label for="middleTest">Điểm bài kiểm tra giữa kì: </label>
+                <input type="number" min="0" max="10" value="1" min="1" max="100" id="middleTest">
+            </div>
+            <div class="box">
+                <label for="endTest">Điểm bài thi cuối kì: </label>
+                <input type="number" min="0" max="10" value="1" min="1" max="100" id="endTest">
+            </div>
+            <div class="box">
+                <label for="testResult">Kết quả kiểm tra: </label>
+                <input type="text"   id="testResult" disabled>
+            </div>
+            <button type="button" id="btnTest">Kiểm tra</button>
+        </form>
+        <form >
+            <h3>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h3>
+            <div class="box">
+                <label for="price">Nhập giá bán (VND): </label>
+                <input type="number" min="0" max="10" value="1" min="1" max="100" id="price">
+            </div>
+            <div class="box">
+                <label for="percent">Phần trăm hoa hồng (%): </label>
+                <input type="number" min="0" max="10" value="1" min="1" max="100" id="percent">
+            </div>
+            <div class="box">
+                <label for="moneyResult">Tiền hoa hồng nhận được: </label>
+                <input type="text"   id="moneyResult" disabled>
+            </div>
+            <button type="button" id="btnMoney">Kết quả</button>
+        </form>
+        <form >
+            <h3>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h3>
+            <div class="box">
+                <label for="price">Nhập giá bán (VND): </label>
+                <input type="number" min="0" max="10" value="1" min="1" max="100" id="price">
+            </div>
+            <div class="box">
+                <label for="percent">Phần trăm hoa hồng (%): </label>
+                <input type="number" min="0" max="10" value="1" min="1" max="100" id="percent">
+            </div>
+            <div class="box">
+                <label for="moneyResult">Tiền hoa hồng nhận được: </label>
+                <input type="text"   id="moneyResult" disabled>
+            </div>
+            <button type="button" id="btnMoney">Kết quả</button>
         </form>
     </div>
 <!--    
-    <h3>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó </h3>
-    <h3>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</h3>
-    <h3>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h3>
     <h3>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</h3> -->
 </body>
 <script src="./index.js"></script>

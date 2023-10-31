@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10</title>
+    <style>
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            background-color: #000;
+            color: #fff;
+            gap: 5px;
+            /* flex-basis: 49%; */
+        }
+
+        h3 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .box {
+            display: flex;
+        }
+
+        label {
+            flex: 1;
+        }
+
+        input {
+            flex: 1;
+        }
+
+        #resultF,
+        #resultFeet,
+        #resultEdge,
+        #resultArea,
+        #resultTri,
+        #equaReult,
+        #equaReult1,
+        #equaReult2,
+        #ageResult,
+        #triResult,#elecResult {
+            color: #e74040;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form>
+            <h3>Chuyển dổi độ C sang độ F</h3>
+            <div class="box">
+                <label for="doC">Nhập độ C: </label>
+                <input type="number" value="0" id="doC">
+            </div>
+            <div class="box">
+                <label for="resultF">Kết quả độ F: </label>
+                <input type="numer" id="resultF" value="0" disabled>
+            </div>
+            <button type="button" id="btnchange">Chuyển</button>
+        </form>
+        <form>
+            <h3>Bài 2: Chuyển từ mét sang feet</h3>
+            <div class="box">
+                <label for="meter">Nhập giá trị (mét)</label>
+                <input type="number" value="0" id="meter">
+            </div>
+            <div class="box">
+                <label for="resultFeet">Kết quả chuyển đổi:</label>
+                <input type="number" value="0" id="resultFeet" disabled>
+            </div>
+            <button type="button" id="btnFeet">Chuyển</button>
+        </form>
+        <form>
+            <h3> Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h3>
+            <div class="box">
+                <label for="edge">Nhập cạnh hình vuông (met)</label>
+                <input type="number" value="0" id="edge">
+            </div>
+            <div class="box">
+                <label for="resultEdge">Diện tích hình vuông (m<sup>2</sup>):</label>
+                <input type="number" value="0" id="resultEdge" disabled>
+            </div>
+            <button type="button" id="btnEdge">Tính</button>
+        </form>
+        <form>
+            <h3>Bài 4: Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</h3>
+            <div class="box">
+                <label for="lengRec">Nhập chiều dài hình chữ nhật (met)</label>
+                <input type="number" value="0" id="lengRec">
+            </div>
+            <div class="box">
+                <label for="widthRec">Nhập cạnh hình chữ nhật (met)</label>
+                <input type="number" value="0" id="widthRec">
+            </div>
+            <div class="box">
+                <label for="resultArea">Diện tích hình chữ nhật (m<sup>2</sup>):</label>
+                <input type="number" value="0" id="resultArea" disabled>
+            </div>
+            <button type="button" id="btnArea">Tính</button>
+        </form>
+        <form>
+            <h3>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h3>
+            <div class="box">
+                <label for="lengFirst">Nhập chiều dài cạnh góc vuông thứ nhất: (met)</label>
+                <input type="number" value="0" id="lengFirst">
+            </div>
+            <div class="box">
+                <label for="lengthSecond">Nhập chiều dài cạnh góc vuông thứ hai: (met)</label>
+                <input type="number" value="0" id="lengthSecond">
+            </div>
+            <div class="box">
+                <label for="resultTri">Diện tích tam giác vuông (m<sup>2</sup>):</label>
+                <input type="number" value="0" id="resultTri" disabled>
+            </div>
+            <button type="button" id="btnTri">Tính</button>
+        </form>
+        <form>
+            <h3>Bài 6: Giải phương trình bậc 1. (AX+B = 0)</h3>
+            <div class="box">
+                <label for="factorA">Nhập hệ số a: </label>
+                <input type="number" value="0" id="factorA">
+            </div>
+            <div class="box">
+                <label for="factorB">Nhập hệ số b: </label>
+                <input type="number" value="0" id="factorB">
+            </div>
+            <div class="box">
+                <label for="equaReult">Nghiệm phương trình là:</label>
+                <input type="text" value="0" id="equaReult" disabled>
+            </div>
+            <button type="button" id="btnEqua">Tính</button>
+        </form>
+        <form>
+            <h3>Bài 7: Giải phương trình bậc 2. (ax<sup>2</sup>+bx+C=0)</h3>
+            <div class="box">
+                <label for="factA">Nhập hệ số a: </label>
+                <input type="number" value="0" id="factA">
+            </div>
+            <div class="box">
+                <label for="factB">Nhập hệ số b: </label>
+                <input type="number" value="0" id="factB">
+            </div>
+            <div class="box">
+                <label for="factC">Nhập hệ số c: </label>
+                <input type="number" value="0" id="factC">
+            </div>
+            <div class="box">
+                <label for="equaReult1">Nghiệm phương trình (x<sub>1</sub>):</label>
+                <input type="text" value="0" id="equaReult1" disabled>
+            </div>
+            <div class="box">
+                <label for="equaReult2">Nghiệm phương trình (x<sub>2</sub>):</label>
+                <input type="text" value="0" id="equaReult2" disabled>
+            </div>
+            <button type="button" id="btnEqua2">Tính</button>
+        </form>
+        <form>
+            <h3> Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.</h3>
+            <div class="box">
+                <label for="age">Nhập số bất kỳ để kiểm tra: </label>
+                <input type="number" min="0" value="0" id="age">
+            </div>
+            <div class="box">
+                <label for="ageResult">Kết quả kiểm tra:</label>
+                <input type="text" value="0" id="ageResult" disabled>
+            </div>
+            <button type="button" id="btnAge">Kiểm tra</button>
+        </form>
+        <form>
+            <h3>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.</h3>
+            <div class="box">
+                <label for="firstNumber">Nhập số thứ nhất: </label>
+                <input type="number" min="0" value="0" id="firstNumber">
+            </div>
+            <div class="box">
+                <label for="secondNumber">Nhập số thứ hai: </label>
+                <input type="number" min="0" value="0" id="secondNumber">
+            </div>
+            <div class="box">
+                <label for="thirdNumber">Nhập số thứ ba: </label>
+                <input type="number" min="0" value="0" id="thirdNumber">
+            </div>
+            <div class="box">
+                <label for="triResult">Kết quả kiểm tra:</label>
+                <input type="text" value="0" id="triResult" disabled>
+            </div>
+            <button type="button" id="btnCheck">Kiểm tra</button>
+        </form>
+        <form>
+            <h3>Bài 10: Viết chương trình tính giá điện. (2014 đồng/kwh)</h3>
+            <div class="box">
+                <label for="power">Nhập công suất tiêu thụ (W): </label>
+                <input type="number" min="0" value="0" id="power">
+            </div>
+            <div class="box">
+                <label for="timed">Thời gian tiêu thụ(h): </label>
+                <input type="number" min="0" value="0" id="timed">
+            </div>
+            <div class="box">
+                <label for="elecResult">Tiền điện (VND):</label>
+                <input type="number" value="0" id="elecResult" disabled>
+            </div>
+            <button type="button" id="btnElectric">Tính</button>
+        </form>
+        <form>
+            <h3>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h3>
+            <div class="box">
+                <label for="total">Tổng thu nhập (VND): </label>
+                <input type="number" min="0" value="0" id="total">
+            </div>
+            <div class="box">
+                <label for="totalResult">thuế phải nộp (VND):</label>
+                <input type="number" value="0" id="totalResult" disabled>
+            </div>
+            <button type="button" id="btnTotal">Tính</button>
+        </form>
+    </div>
+    <!-- 
+    <h3>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và
+        lãi xuất hàng tháng.</h3> -->
+</body>
+<script src="./index.js"></script>
+
+</html>

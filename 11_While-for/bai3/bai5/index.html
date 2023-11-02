@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</h3>
+</body>
+<script>
+     // let nInput = prompt("Nhap N: ")
+     let total = 0;
+    let f1 = 1;
+    let f2 = 2;
+    let f;
+    // while (nInput <= 2) {
+    //     nInput = prompt("Nhap lai N: ")
+    // }
+    document.write(f1 + "<br>");
+    document.write(f1 + "<br>");
+    // console.log(nInput);
+    for (let i = 3; i <= 20; i++) {
+        if (i <= 20) {
+            f = f1 + f2;
+            // console.log(f);
+            f1 = f2;
+            f2 = f;
+            console.log(f);
+            total =1+1+2+ total + f;
+        }
+    }
+    document.write("Tong 20 so dau la: " +total)
+            
+
+</script>
+</html>

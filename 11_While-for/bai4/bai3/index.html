@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<h3>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau </h3>
+</body>
+<script>
+	// //Hien thi dialog -> cho phep nhap gia tri cua N
+	// var N = prompt('Nhap gia tri N')
+	// //Chuyen kieu du lieu cua N tu string toi int
+	// N = parseInt(N)
+	// //xay dung do cao cua hinh tam giac
+	// for(i=0;i<N;i++) {
+	// 	//tao hang (row) *
+	// 	for(j=0;j<=i;j++) {
+	// 		document.writeln(" * ")
+	// 	}
+
+	// 	//xuong dong khi hien thi ket qua cua tung hang
+	// 	document.writeln("<br/>")
+	// }
+
+	//in ra canh tam giac bang 5
+	let i, j;
+	let k, h;
+	// for (i = 1; i <= 5; i++) {
+	// 	for (j = 1; j <= i; j++) {
+	// 		document.write("*")
+	// 	}
+	// 	document.write("<br/>")
+	// }
+	document.write("<br/>")
+	// for (i = 1; i <= 5; i++) {
+
+	// 	for (j = i; j <= 5; j++) {
+	// 		document.write("*")
+	// 	}
+	// 	document.write("<br/>")
+	// }
+
+	for (i = 5; i >= 1; i--) {
+		document.write(i)
+		for(j=1;j<=i;j++){
+			document.writeln(" * ")
+		}
+		for (j=1;j<=i;j++) {
+			// document.write(" ")
+			document.writeln("*")
+		}
+		document.write("<br/>")
+	}
+	
+</script>
+
+</html>

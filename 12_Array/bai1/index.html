@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <form>
+        <h3>Viết một chương trình JavaScript để thêm vào các phần tử trong một mảng và hiển thị chúng.</h3>
+        <div class="box">
+            <label for="arrayInput">Nhập giá trị cần thêm vào mảng</label>
+            <input type="text" id="arrayInput">
+        </div>
+        <button type="button" id="btnAdd">Add</button>
+        <button type="button" id="btnDisplay">Display</button>
+        <p id="result"></p>
+    </form>
+</body>
+<script>
+    let arrayInput = document.getElementById('arrayInput')
+    let result = document.getElementById('result')
+
+    let btnAdd = document.getElementById('btnAdd')
+    let btnDisplay = document.getElementById('btnDisplay')
+
+    let arr = []
+    let x = 0
+    const themArray = () => {
+        // arr[x] = arrayInput.value;
+        // x++;
+        // arrayInput.value =""
+        arr[x] = arrayInput.value;
+        alert("Element: " + arr[x] + " Added at index " + x);
+        x++;
+        arrayInput.value = "";
+    }
+
+    const hienthiArray = () => {
+        // let text =""
+        // for (let i = 0; i <= arr.length-1; i++) {
+        //     text += "Element " + i + " " + arr[i] + "<br>"
+        // }
+        // result.innerHTML = text
+        let e = "<hr/>";
+        for (let i = 0; i < arr.length; i++) {
+            e += "Element " + i + " = " + arr[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+
+    btnAdd.addEventListener('click', themArray)
+    btnDisplay.addEventListener('click', hienthiArray)
+</script>
+
+</html>

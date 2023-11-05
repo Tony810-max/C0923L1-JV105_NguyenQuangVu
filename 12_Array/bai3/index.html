@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 3</title>
+    <style>
+        form{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        }
+        .box{
+            display: flex;
+
+        }
+        input{
+            flex: 1;
+        }
+        label{
+            flex: 1;
+        }
+        #result{
+            color: rgb(231, 31, 31);
+            font-weight: 700;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h3>Tìm một giá tri được nhập vào từ hộp thoại có nằm trong mảng hay không</h3>
+        <div class="box">
+            <label for="arrInput">Nhập dữ liệu kiểm tra</label>
+            <input type="text" id="arrInput">
+        </div>
+        <div class="box">
+            <label for="result">Kết quả kiểm tra:</label>
+            <input type="text" id="result" disabled>
+        </div>
+        <button type="button" id="btnCheck">Check</button>
+    </form>
+</body>
+<script src="./index.js"></script>
+
+</html>

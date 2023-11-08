@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <p id="results"></p>
+</body>
+<script>
+    // Bài 4: Viết một chương trình để đếm số từ trong một chuỗi
+    let results = document.getElementById('results')
+    let str = "day la mot doan test"
+    
+    let result = `
+    <h3>Chuỗi ban đầu là: <span style =" color: red; "${str}" </span></h3>
+    <h3>Số lượng kí tự trong chuỗi là (Bao gồm khoảng cách): ${str.length} </h3>
+    `
+    results.innerHTML = result
+</script>
+
+</html>

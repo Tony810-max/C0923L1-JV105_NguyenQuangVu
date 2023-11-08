@@ -6,14 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h3></h3>
+    
+    <p id="print"></p>
 </body>
 <script>
     // Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. 
     // Chương trình này đếm số ký tự số trong mảng. 
     let arr = ['1','c','s','2','3','4','x','s','5']
     let arr2 =[0,1,2,3,4,5,6,7,8]
-
+    let prints = document.getElementById("print")
     
     let item,item1;
     let count =0;
@@ -24,6 +25,11 @@
             }
         }
     }
-    console.log(count);
+    let result = `
+    <h3>Mảng đã cho ban đầu là: [${arr}] </h3>
+
+    <h3>Số lượng ký tự số là: ${count} </h3>
+    `
+    prints.innerHTML = result
 </script>
 </html>

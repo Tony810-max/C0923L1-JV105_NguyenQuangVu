@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+        }
+
+        .box {
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            flex: 1
+        }
+
+        label {
+            flex: 1;
+        }
+
+        #result {
+            color: rgb(226, 43, 43);
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="box">
+            <label for="doc">Nhập từ: </label>
+            <input type="text" id="doc">
+        </div>
+        <div class="box">
+            <label for="result">Kết quả: </label>
+            <input type="text" id="result" disabled>
+        </div>
+        <button type="button" id="btnDoc">Dịch</button>
+    </form>
+</body>
+<script>
+    let doc = document.getElementById('doc')
+    let result = document.getElementById('result')
+
+    let btnDoc = document.getElementById('btnDoc')
+
+    let arr = ["táo", "chuối", "cam"]
+    let arr2 = ["apple", "banana", "orange"]
+    let item, item2;
+    let i, j;
+    
+    const research = () => {
+        
+
+        for (i = 0; i < arr.length; i++) {
+            if (doc.value === arr[i]) {
+                result.value = arr2[i]
+                break
+            }
+        }
+        for (j = 0; j < arr2.length; j++) {
+            if (doc.value === arr2[j]) {
+                result.value = arr[j]
+            }
+        }
+    }
+
+    btnDoc.addEventListener('click', research)
+</script>
+
+</html>

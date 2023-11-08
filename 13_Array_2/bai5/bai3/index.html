@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Bài 3- Viết chương trình khởi tạo mảng số nguyên. 
+    // Hiển hiện giá trị lớn nhất trong mảng đó. 
+    // In ra giá trị trung bình của các phần tử trong mảng.
+
+    let arr= [0,2,1,3,4324,-1,2,-3]
+    let sum = 0;
+    let i,item;
+    let max =arr[0]
+    for (i=0;i< arr.length;i++){
+        sum += arr[i];
+        if(arr[i]> max ){
+            max = arr[i]
+        }
+    }
+    let aver = sum/arr.length
+    document.write("Mảng: " + "[" + arr + "]" + "<br>")
+    document.write("Số lớn nhất là: " +max + " và giá trị trung bình trong mảng là: " + aver)
+</script>
+</html>

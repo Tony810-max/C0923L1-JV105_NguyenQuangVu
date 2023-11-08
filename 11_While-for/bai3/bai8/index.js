@@ -20,4 +20,4 @@ function doanSo() {
     }
 }
 
-btnPlay.addEventListener('click',doanSo)
+btnPlay.addEventListener('click', doanSo)

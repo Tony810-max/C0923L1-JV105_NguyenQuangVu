@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -18,7 +21,17 @@
     //  (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,
     // và gán 0 cho phần tử cuối cùng của mảng)
 
-    
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let V = 2;
+
+    if (arr.includes(V)) {
+        let index = arr.indexOf(V);
+        for (let i = index; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[arr.length - 1] = 0;
+    }
+    console.log(arr);
 </script>
 
 </html>

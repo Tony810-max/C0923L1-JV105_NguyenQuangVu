@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi
+    let arr = [2, 312, 3, -3, -3, -4, -4, -5]
+    let item;
+    let count = 0;
+    for (item of arr) {
+        if (item < 0) {
+            count += 1
+        }
+    }
+    let print = `Mảng khởi tạo là: [${arr}] <br>` 
+    let result = "Số lượng giá trị âm trong mảng là: " + count
+    document.write(print)
+    document.write(result)
+</script>
+
+</html>

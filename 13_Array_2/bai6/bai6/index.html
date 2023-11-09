@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <form >
+    <form>
         <div class="box">
             <label for="inputValue"></label>
             <input type="text" id="inputValue">
         </div>
         <button type="button" id="btnAdd">Thêm</button>
         <p id="result"></p>
+        <p id="result2"></p>
     </form>
 </body>
 <script>
@@ -21,14 +24,36 @@
 
     const btnAdd = document.getElementById('btnAdd')
     const result = document.getElementById('result')
-    let arr =[]
+    const result2 = document.getElementById('result2')
+
+    let arr = []
+    let arr2 = []
+    let inputValue, i;
     const research = () => {
-        let inputValue = document.getElementById('inputValue').value
-       result.innerHTML= arr.push(inputValue)
+        inputValue = document.getElementById("inputValue").value
+
+        if (inputValue !== '') {
+            arr.push(inputValue)
+            result.innerHTML = `đây là mảng được thêm:<br/> [${arr}] <br/>`
+            for (i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
+                if (arr[i] === "-") {
+                    arr[i] = "_";
+                    result2.innerHTML = `đây là mảng đã được chỉnh sửa:<br/> [${arr}] <br/>`
+                } else{
+                    result2.innerHTML = `đây là mảng đã được chỉnh sửa:<br/> [${arr}] <br/>`
+                }
+            }
+        } else {
+            result.innerHTML = `<h3 style="color: red">Vui lòng nhập vào ký tự bất kì để tạo mảng </h3>`
+        }
+
+
     }
 
 
 
-    btnAdd.addEventListener('click',research)
+    btnAdd.addEventListener('click', research)
 </script>
+
 </html>

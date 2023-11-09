@@ -24,7 +24,7 @@
     // Bài 4- Viết chương trình khởi tạo/
     // nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
 
-    let intInput =document.getElementById('intInput').value
+    let intInput =document.getElementById('intInput')
     let reusultInput = document.getElementById('reusultInput')
     let result = document.getElementById('result')
     let btnInt = document.getElementById("btnInt")
@@ -34,11 +34,11 @@
     const reverse = () => {
         intValue = parseInt(intInput.value)
         if (!isNaN(intValue) ) {
-            let arr2 = arr.push(intValue )
+            let arr2 = arr.push(intValue)
             reusultInput.innerHTML = " <h3 >Mảng đã nhập: </h3>" + "[" + arr + "]"
             result.innerHTML = "<h3> Mảng đã đảo ngược là: </h3>" + "[" + arr.reverse() + "]"
         } else {
-            result.innerHTML = "Vui lòng nhập số vào"
+            reusultInput.innerHTML = `<p style="color: red;font-weight: 700">Vui lòng nhập số vào </p>`
         }
     }
     btnInt.addEventListener('click', reverse)

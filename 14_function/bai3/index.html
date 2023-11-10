@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+</body>
+<script>
+    // Xây dựng hàm nhận vào một tham số là một mảng cho trước.
+    //  Hàm thực hiện tìm giá trị nhỏ nhất trong mảng và trả về giá trị đó.
+    let result = document.getElementById('result')
+    let arr1= [3, 5, 1, 8, -3, 7, 8]
+   let arr2= [7, 12, 6, 9, 20, 56, 89]
+
+   let arr3= []
+
+   let arr4= [0, 0, 0, 0, 0, 0]
+    const minArray = (arr) => {
+        let min = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i]<min){
+                min = arr[i]
+            }
+        }
+        return min;
+    }
+    result.innerHTML = `
+    Giá trị nhỏ nhất trong mảng [${arr1}]: <span style = "color: red">${minArray(arr1)} </span> 
+    <br/>
+    Giá trị nhỏ nhất trong mảng [${arr2}]: <span style = "color: red">${minArray(arr2)} </span> 
+    <br/>
+    Giá trị nhỏ nhất trong mảng [${arr3}]: <span style = "color: red">${minArray(arr3)} </span> 
+    <br/>
+    Giá trị nhỏ nhất trong mảng [${arr4}]: <span style = "color: red">${minArray(arr4)} </span> 
+
+    `
+
+    minArray(arr1)
+</script>
+
+</html>

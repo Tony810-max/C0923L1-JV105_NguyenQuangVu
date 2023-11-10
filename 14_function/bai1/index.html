@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h3>Sử dụng hàm confirm để nhận thông tin đầu vào và đưa ra quyết định dựa trên những thông tin đó.</h3>
+</body>
+<script>
+    const checkConfirm = (aswer) => {
+        let result = ""
+        if (aswer) {
+            result = "Bạn đã xác nhận thông tin"
+        } else {
+            result = "Bạn đã hủy thông tin"
+        }
+        return result;
+    }
+
+    let asw = confirm("Hãy xác nhận câu trả lời của bạn: ")
+
+    alert(checkConfirm(asw))
+</script>
+
+</html>

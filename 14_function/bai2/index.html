@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .box {
+            display: flex;
+        }
+
+        input,
+        label {
+            flex: 1;
+        }
+
+        #result {
+            font-weight: 700;
+            color: rgb(227, 11, 11);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h3>Xây dựng hàm để chuyển đổi từ độ F cho trước sang độ C theo công thức sau: C = (F - 32)/1.8</h3>
+        <div class="box">
+            <label for="numberValue">Nhập giá trị: (<sup>o</sup>F)</label>
+            <input type="number" id="numberValue" value="0">
+        </div>
+        <div class="box">
+            <label for="result">Kết quả: (<sup>o</sup>C)</label>
+            <input type="text" id="result" value="0" disabled>
+        </div>
+        <button type="button" id="btnCal" >Tính</button>
+    </form>
+</body>
+<script>
+    let btnCal = document.getElementById('btnCal')
+let numberValue, result1;
+    const changeValue = () => {
+         numberValue = parseFloat(document.getElementById('numberValue').value)
+        let result = document.getElementById('result')
+         result1 = (numberValue-32)/1.8;
+        result.value = result1.toFixed(3)
+    }
+
+    btnCal.addEventListener('click',changeValue)
+</script>
+
+</html>

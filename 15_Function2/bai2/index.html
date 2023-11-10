@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .box {
+            display: flex;
+        }
+
+        input,
+        label {
+            flex: 1;
+        }
+        #resultMet,#resultFeet{
+            color: rgb(229, 31, 31);
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h3>Chuyển đổi giữa feet và meters</h3>
+        <div class="box">
+            <label for="metValue">Nhập giá trị (mét)</label>
+            <input type="number" id="metValue" value="0">
+        </div>
+        <div class="box">
+            <label for="resultFeet">Kết quả (Feet)</label>
+            <input type="number" id="resultFeet" value="0" disabled>
+        </div>
+        <button type="button" id="btnMet">Chuyển</button>
+        <div class="box">
+            <label for="feetValue">Nhập giá trị (Feet)</label>
+            <input type="number" value="0" id="feetValue">
+        </div>
+        <div class="box">
+            <label for="resultMet">Kết quả (mét)</label>
+            <input type="number" id="resultMet" value="0" disabled>
+        </div>
+        <button type="button" id="btnFeet">Chuyển</button>
+    </form>
+</body>
+<script>
+    let btnMet = document.getElementById('btnMet')
+    let btnFeet = document.getElementById('btnFeet')
+    const changeMeter = () => {
+        let metValue = parseFloat(document.getElementById('metValue').value)
+        let resultFeet = document.getElementById('resultFeet')
+        let result = 3.279*metValue;
+        resultFeet.value = result
+
+    }
+    const changeFeeter = () => {
+        let feetValue = parseFloat(document.getElementById('feetValue').value)
+        let resultMet = document.getElementById('resultMet')
+        let result = 0.305*feetValue;
+        resultMet.value = result
+    }
+    btnMet.addEventListener('click',changeMeter)
+    btnFeet.addEventListener('click',changeFeeter)
+</script>
+</html>

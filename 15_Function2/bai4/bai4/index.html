@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+    //  Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+
+    let inpValue = parseInt(prompt("Nhập ký tự bất kì"))
+   
+    const checkNum =  (number) => {
+        if (isNaN(number)) {
+            alert('Giá trị bạn nhập không phải là ký tự số');
+        } else {
+            alert('Giá trị bạn nhập là một ký tự số')
+        }
+
+    }
+    checkNum(inpValue)
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    const min = (number1, number2, number3) => {
+
+        //Cach 1:
+        // let minNum;
+        // if (number1 < number2 && number1 < number3) {
+        //     minNum = number1;
+        // } else if (number2 < number1 && number2 && number1) {
+        //     minNum = number2;
+
+        // } else {
+        //     minNum = number3;
+        // }
+        // return minNum
+
+
+        //cach2
+        let arr = [number1, number2, number3]
+        let minArr = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < minArr) {
+                minArr = arr[i]
+            }
+        }
+        return minArr;
+    }
+
+    console.log("Giá trị nhỏ nhất trong ba số là: " + min(3, 5, -3));
+</script>
+
+</html>

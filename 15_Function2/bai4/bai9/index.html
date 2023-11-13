@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, 
+    // kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. 
+    // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. 
+    let arr = ["-", "s", "sd", "s", "s", "3"]
+    let char = "sd";
+    let count = 0;
+
+    const checkChar = (arrValue) => {
+        // for (let itemp of arrValue){
+        //     if(itemp === char){
+        //         count += 1;
+        //     } else {
+        //         return -1;
+        //     }
+        // }
+        arrValue.map((item) => {
+            if (item === char) {
+                count += 1;
+            }
+        })
+        if (count !== 0) {
+            return count
+        } else {
+            return -1;
+        }
+    }
+    alert("Số lần xuất hiện trong mảng là: " + checkChar(arr))
+</script>
+
+</html>

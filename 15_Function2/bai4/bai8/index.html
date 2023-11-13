@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    let arr = [1, 32, 4, 2]
+    let arr2 = [];
+    let i;
+    const swapArr = (arrValue) => {
+        // arrValue.reverse()
+        for (i = arrValue.length; i >= 0; i--) {
+            if (arrValue[i] != undefined) {
+                arr2.push(arrValue[i])
+            }
+        }
+        return arr2
+    }
+    console.log(swapArr(arr));
+</script>
+
+</html>

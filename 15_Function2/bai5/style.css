@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    position: relative;
+}
+
+#add {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    background-color: #ccc;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+}
+
+.box {
+    display: flex;
+    gap: 2px;
+}
+
+input,
+button {
+    flex: 1;
+}
+
+#edit,
+#delete {
+    width: 50px;
+}
+
+#delete {
+    background-color: red;
+    color: #fff;
+}
+
+#btnAdd,
+#btnEdit,
+#btnHide {
+    width: 50px;
+}
+
+#edit,
+#btnAdd,
+#btnEdit {
+    background-color: #50af50;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#btnHide {
+    background-color: orange;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+#display {
+    display: flex;
+    flex-direction: row;
+    padding: 0 25px;
+    z-index: 1;
+
+}
+
+#subForm {
+    display: none;
+    width: 50%;
+    z-index: 9999;
+}
+
+.idValue {
+    width: 30%;
+    color: rgb(240, 37, 37);
+    font-weight: 700;
+}

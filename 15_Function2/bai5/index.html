@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div id="main">
+        <div id="add">
+            <h3>Add New Product</h3>
+            <form>
+                <div class="box">
+                    <!-- <label for="product"></label> -->
+                    <input type="text" id="product">
+                    <button type="button" id="btnAdd">Add</button>
+                </div>
+            </form>
+        </div>
+        <h3>Display All Product</h3>
+        <div id="display">
+            <table id="mainTable">
+
+            </table>
+            <div id="subForm">
+                <form>
+                    <div class="box1">
+                        <h3 style="text-align: center;">Vui lòng nhập nội dung chỉnh sửa (Nếu không có thì ẩn nó đi) </h3>
+                        <div class="box">
+                            <input type="text" id="idValue" class="idValue" disabled>
+                            <input type="text" id="editValue">
+                            <button type="button" id="btnEdit">sửa</button>
+                            <button type="button" id="btnHide">Ẩn</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
-<script src="./index.js"></script>
+<script src="./index.js">
+
+</script>
+
 </html>

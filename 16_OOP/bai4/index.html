@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Rectangle(length, width) {
+        this.length = length;
+        this.width = width;
+        this.ara = function () {
+            let resultArea = `Kết quả tính diện tích hình chữ nhật với cạnh dài - ${length} và cạnh ngắn - ${width} là: ${length*width}`
+            return resultArea;
+        }
+        this.parameter = function () {
+            let resultParam = `Kết quả tính chu vi hình chữ nhật với cạnh dài - ${length} và cạnh ngắn - ${width} là: ${(length+width)*2}`
+            return resultParam
+        }
+    }
+    let hcn = new Rectangle(30,40)
+    console.log(hcn.ara());
+    console.log(hcn.parameter())
+</script>           
+
+</html>

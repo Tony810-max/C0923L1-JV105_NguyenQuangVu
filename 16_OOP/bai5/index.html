@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Temperature(inpValue) {
+        this.inpValue = inpValue
+        this.change = function () {
+            const kelvin = inpValue + 273.15;
+            result = document.write("Giá trị kelvin: " + kelvin + "<br/>");
+            return result;
+        }
+    }
+
+    let temper = new Temperature(15)
+    // document.write(temper.change() +"<br/>");
+    temper.change()
+    document.write("Giá trị của độ C: " + temper.inpValue);
+</script>
+
+</html>

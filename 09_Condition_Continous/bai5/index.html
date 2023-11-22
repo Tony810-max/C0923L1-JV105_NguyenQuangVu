@@ -2,61 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bài 3</title>
-    <style>
-      /* table,tr,td{
-        border: 1px #000 solid;
-        border-collapse: collapse;
-      } */
-      html{
-        font-size: 24px;
-      }
-      .main{
-        width: 80%;
-      }
-      .d-flex{
-        display: flex;
-        /* flex-direction: column; */
-      }
-      
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="main">
-        <form action="">
+  <input type="text" id="view"><br><br>
+  <div class="thang">
+    <table>
+      <tr>
+        <td><button type="button" name="btn" value="1" onclick="inputValue(this.value)"> 1 </button></td>
+        <td><button type="button" name="btn" value="2" onclick="inputValue(this.value)"> 2 </button></td>
+        <td><button type="button" name="btn" value="3" onclick="inputValue(this.value)"> 3 </button></td>
+        <td><button type="button" name="op" value="+" onclick="inputValue(this.value)"> + </button></td>
+      </tr>
 
-            <input type="text"> <br/> 
-            <div class="row1 d-flex">
-                <input type="button" value="1" id="btn1">
-                <input type="button" value="2" id="btn2">  
-                <input type="button" value="3" id="btn3">
-                <input type="button" value="+" id="btn+">
-            </div>
-            <div class="row2">
-                <input type="button" value="4" id="btn4">
-                <input type="button" value="5" id="btn5">
-                <input type="button" value="6" id="btn6">
-                <input type="button" value="-" id="btn-"> 
-            </div>
-            <div class="row3">
-                <input type="button" value="7" id="btn7">
-            <input type="button" value="8" id="btn8">
-            <input type="button" value="9" id="btn9">
-            <input type="button" value="*" id="btn*">
-        </div>
-        <div class="row4">
-            <input type="reset" value="AC" id="btnAC">
-            <input type="button" value="0" id="btn0">
-            <input type="button" value="=" id="btn=">
-            <input type="button" value="/" id="btn/"> 
-        </div>
-    </div>
-</form>
-    
+      <tr>
+        <td><button type="button" name="btn" value="4" onclick="inputValue(this.value)"> 4 </button></td>
+        <td><button type="button" name="btn" value="5" onclick="inputValue(this.value)"> 5 </button></td>
+        <td><button type="button" name="btn" value="6" onclick="inputValue(this.value)"> 6 </button></td>
+        <td><button type="button" name="op" value="-" onclick="inputValue(this.value)"> - </button></td>
+      </tr>
+      <tr>
+        <td><button type="button" name="btn" value="7" onclick="inputValue(this.value)"> 7 </button></td>
+        <td><button type="button" name="btn" value="8" onclick="inputValue(this.value)"> 8 </button></td>
+        <td><button type="button" name="btn" value="9" onclick="inputValue(this.value)"> 9</button></td>
+        <td><button type="button" name="op" value="*" onclick="inputValue(this.value)"> * </button></td>
+      </tr>
+      <tr>
+        <td><button type="button" onclick="xoa();"> AC </button></td>
+        <td><button type="button" name="btn" onclick="inputValue(this.value)"> 0 </button></td>
+        <td><button name="reusult" onclick="result();"> = </button></td>
+        <td><button type="button" name="op" value="/" onclick="inputValue(this.value)"> / </button></td>
+      </tr>
+    </table>
+
+  </div>
+  <script>
+    let view = document.getElementById("view");
+    function inputValue(value) {
+      view.value += value;
+    }
+    function result() {
+      let result = eval(view.value);
+      view.value = result;
+    }
+    function xoa() {
+      view.value = "";
+    }
+  </script>
 </body>
-<script src="./index.js"></script>
 
 </html>

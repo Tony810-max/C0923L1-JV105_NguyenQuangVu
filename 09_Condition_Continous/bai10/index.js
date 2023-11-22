@@ -138,14 +138,14 @@ const btnAge = document.getElementById('btnAge')
 
 const ageCheck = () => {
   let ageValue = parseInt(ageIput.value)
-  if (ageValue <120 && ageValue >0){
+  if (ageValue < 120 && ageValue > 0) {
     ageResult.value = "Đây là tuổi người"
   } else {
     ageResult.value = "Đây không phải là tuổi người"
   }
 }
 
-btnAge.addEventListener('click',ageCheck)
+btnAge.addEventListener('click', ageCheck)
 
 //bai 9
 const firstNumber = document.getElementById('firstNumber')
@@ -153,23 +153,23 @@ const secondNumber = document.getElementById('secondNumber')
 const thirdNumber = document.getElementById('thirdNumber')
 const triResult = document.getElementById('triResult')
 
-const btnCheck =document.getElementById('btnCheck')
+const btnCheck = document.getElementById('btnCheck')
 
 const kiemtratamgiac = () => {
   let a = parseFloat(firstNumber.value)
   let b = parseFloat(secondNumber.value)
   let c = parseFloat(thirdNumber.value)
 
-  if (a >0 && b >0 && c>0){
-    if (a+b>c && a+c>b && b+c>a){
-      triResult.value ="Ba số đã nhập là 3 cạnh của 1 tam giác"
+  if (a > 0 && b > 0 && c > 0) {
+    if (a + b > c && a + c > b && b + c > a) {
+      triResult.value = "Ba số đã nhập là 3 cạnh của 1 tam giác"
     }
   } else {
-    triResult.value ="Ba số đã nhập không là 3 cạnh của 1 tam giác"
+    triResult.value = "Ba số đã nhập không là 3 cạnh của 1 tam giác"
   }
 }
 
-btnCheck.addEventListener('click',kiemtratamgiac)
+btnCheck.addEventListener('click', kiemtratamgiac)
 
 //bai10
 
@@ -179,15 +179,15 @@ const elecResult = document.getElementById('elecResult')
 
 const btnElectric = document.getElementById('btnElectric')
 
-const tiendien =() => {
+const tiendien = () => {
   let powerValue = parseFloat(power.value)
   let timedValue = parseFloat(timed.value)
 
-  let result = (powerValue/1000)*timedValue*2014
+  let result = (powerValue / 1000) * timedValue * 2014
   elecResult.value = result
 }
 
-btnElectric.addEventListener('click',tiendien)
+btnElectric.addEventListener('click', tiendien)
 
 //bai11
 
@@ -197,7 +197,30 @@ const totalResult = document.getElementById('totalResult')
 const btnTotal = document.getElementById('btnTotal')
 
 const tinhthue = () => {
-  let 
+  let
 }
 
-btnTotal.addEventListener('click',tinhthue)
+btnTotal.addEventListener('click', tinhthue)
+
+//bai12
+function tinhLaiNganHang(soTienBanDau, soThangChoVay, laiXuatHangThang) {
+  // Tính lãi ngân hàng
+  var laiNganHang = 0;
+  var tongSoTien = soTienBanDau;
+
+  for (var i = 1; i <= soThangChoVay; i++) {
+    laiNganHang += tongSoTien * laiXuatHangThang;
+    tongSoTien += laiNganHang;
+  }
+
+  // Trả về kết quả
+  return tongSoTien;
+}
+
+// Ví dụ sử dụng chương trình
+var soTienBanDau = 1000000; // Số tiền ban đầu là 1 triệu đồng
+var soThangChoVay = 12; // Cho vay trong 12 tháng
+var laiXuatHangThang = 0.05; // Lãi suất hàng tháng là 5%
+
+var tongSoTien = tinhLaiNganHang(soTienBanDau, soThangChoVay, laiXuatHangThang);
+console.log("Tổng số tiền sau khi có lãi: " + tongSoTien);

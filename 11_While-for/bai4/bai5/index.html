@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function tinhLaiNganHang(soTienBanDau, soThangChoVay, laiXuatHangThang) {
+        // Tính lãi ngân hàng
+        var laiNganHang = soTienBanDau * laiXuatHangThang * soThangChoVay;
+
+        // Tổng số tiền sau khi có lãi
+        var tongSoTien = soTienBanDau + laiNganHang;
+
+        // Trả về kết quả
+        return tongSoTien;
+    }
+
+    // Ví dụ sử dụng chương trình
+    var soTienBanDau = 1000000; // Số tiền ban đầu là 1 triệu đồng
+    var soThangChoVay = 12; // Cho vay trong 12 tháng
+    var laiXuatHangThang = 0.05; // Lãi suất hàng tháng là 5%
+
+    var tongSoTien = tinhLaiNganHang(soTienBanDau, soThangChoVay, laiXuatHangThang);
+    console.log("Tổng số tiền sau khi có lãi: " + tongSoTien);
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+</body>
+<script>
+       function ElectricLamp(status){
+        this.status = status;
+        
+       }
+
+       function SwitchButton(lamp,status){
+        this.lamp = lamp;
+        this.status = status;
+        this.switchOn = function(){
+            console.log("đèn đã bật");
+            this.lamp.status = true
+            return this.status= true
+        }
+
+        this.switchOff = function(){
+            console.log("Đèn đã tắt");
+            this.lamp.status = false;
+            return this.status=false
+        }
+       }
+
+       let lamp = new ElectricLamp(false)
+       let switch1 = new SwitchButton(lamp,false)
+       
+       console.log(switch1.switchOff());
+    //    console.log(switch1.status);
+       console.log(switch1.switchOn());
+    //    console.log(switch1.status);
+
+</script>
+
+</html>

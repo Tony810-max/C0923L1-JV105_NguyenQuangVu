@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Fruits(weight) {
+        this.weight = weight;
+        this.getWeight = function () {
+            return this.weight
+        }
+        this.setWeight = function (weight) {
+            this.weight = weight
+        }
+        this.isEmpty = function () {
+            if (this.weight <= 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        this.decreaseFruits = function () {
+            if (this.isEmpty()) {
+                alert(this.name + "đã hết..!!")
+            } else {
+                this.weight--
+            }
+        }
+    }
+
+    function Human(name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.saySomething = function () {
+            console.log("Tôi tên là: " + this.name + ", giới tính là: " + this.gender + " và có cân nặng là: " + this.weight);
+        }
+        this.eatFruits = function (fruit) {
+            if (fruit.getWeight() > 0) {
+                fruit.decreaseFruits()
+                this.weight++
+            } else {
+                alert(fruit + "đã hết")
+            }
+        }
+    }
+
+    let Adam = new Human("Adam", "male", 70)
+    let Eva = new Human("Eva", "female", 60)
+    let Apple = new Fruits(10)
+
+    while (Apple.isEmpty() !== true) {
+        document.write("Adam ăn táo <br>")
+        Adam.eatFruits(Apple)
+        document.write("Quả táo còn: " + "<br>");
+        document.write(Apple.getWeight() + " đơn vị" + "<br>");
+        document.write("Cân nặng của Adam là: " + Apple.getWeight() + " đơn vị" + "<br>");
+        document.write("<br>")
+
+        document.write("Eva ăn táo" + "<br>");
+        Eva.eatFruits(Apple);
+
+        document.write("Quả táo còn: " + "<br>");
+        document.write(Apple.getWeight() + " đơn vị" + "<br>");
+        document.write("Cân nặng là: " + Apple.getWeight() + " đơn vị" + "<br>");
+    }
+</script>
+
+</html>
